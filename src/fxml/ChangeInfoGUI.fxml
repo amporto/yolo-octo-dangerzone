@@ -1,19 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.embed.swing.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="800.0" prefWidth="450.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
-   <children>
-      <Label layoutX="190.0" layoutY="145.0" text="Username:" />
-      <TextField layoutX="132.0" layoutY="312.0" promptText="Current Password" />
-      <TextField layoutX="132.0" layoutY="439.0" promptText="Confirm Password" />
-      <TextField layoutX="132.0" layoutY="166.0" AnchorPane.bottomAnchor="603.0" />
-      <Button layoutX="191.0" layoutY="495.0" mnemonicParsing="false" text="Update" />
-      <TextField layoutX="132.0" layoutY="400.0" promptText="New Password" />
-   </children>
+<AnchorPane prefHeight="800.0" prefWidth="450.0"
+	xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="main.ChangeInfoGUI">
+	<children>
+		<ImageView fitHeight="1113.0" fitWidth="503.0" layoutX="-1.0"
+			layoutY="-313.0" pickOnBounds="true" preserveRatio="true">
+			<image>
+				<Image url="@images/accoundBackground.jpg" />
+			</image>
+		</ImageView>
+		<TextField alignment="CENTER" layoutX="135.0" layoutY="210.0"
+			promptText="Current Password" />
+		<TextField alignment="CENTER" layoutX="135.0" layoutY="286.0"
+			promptText="New Password" />
+		<TextField alignment="CENTER" layoutX="135.0" layoutY="325.0"
+			promptText="Confirm Password" />
+		<Button layoutX="185.0" layoutY="366.0" mnemonicParsing="false"
+			onAction="#account" prefHeight="31.0" prefWidth="88.0" text="Update" />
+		<Group layoutY="-28.0">
+			<children>
+				<TextField layoutX="291.0" layoutY="695.0" prefHeight="31.0"
+					prefWidth="73.0" promptText="CVV" />
+				<Rectangle arcHeight="5.0" arcWidth="5.0" height="142.0"
+					layoutX="94.0" layoutY="544.0" stroke="#00000031" strokeType="INSIDE"
+					width="270.0">
+					<fill>
+						<LinearGradient endX="0.17475728155339804" endY="0.8495145631067962"
+							startX="0.17475728155339806">
+							<stops>
+								<Stop color="#ffffff00" />
+								<Stop color="#ffffff00" offset="0.007246376811594203" />
+								<Stop color="#ffffffa2" offset="0.4057971014492754" />
+								<Stop color="#206b3e" offset="1.0" />
+							</stops>
+						</LinearGradient>
+					</fill>
+					<effect>
+						<DropShadow />
+					</effect>
+				</Rectangle>
+				<Label alignment="CENTER" layoutX="53.0" layoutY="481.0"
+					text="Payment Information" textAlignment="CENTER" textFill="WHITE">
+					<font>
+						<Font name="System Bold" size="35.0" />
+					</font>
+					<effect>
+						<DropShadow />
+					</effect>
+				</Label>
+				<Button layoutX="94.0" layoutY="726.0" mnemonicParsing="false"
+					onAction="#payment" prefHeight="41.0" prefWidth="270.0" text="Verify">
+					<graphic>
+						<TextField fx:id="paymentCard" onAction="#payment"
+							promptText="Digits" />
+					</graphic>
+				</Button>
+				<Text fill="WHITE" layoutX="119.0" layoutY="663.0" strokeType="OUTSIDE"
+					strokeWidth="0.0" text="XXXX XXXX XXXX XXXX">
+					<effect>
+						<DropShadow />
+					</effect>
+				</Text>
+				<ImageView fitHeight="83.0" fitWidth="75.0" layoutX="297.0"
+					layoutY="546.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@images/starbucksLogo.png" />
+					</image>
+					<effect>
+						<Glow />
+					</effect>
+				</ImageView>
+				<ComboBox fx:id="comboYear" layoutX="196.0" layoutY="695.0" prefHeight="31.0"
+					prefWidth="95.0" promptText="Year">
+<!-- 					<items> -->
+<!-- 						<FXCollections fx:factory="observableArrayList"> -->
+<!-- 							<String fx:value="Apple" /> -->
+<!-- 							<String fx:value="Orange" /> -->
+<!-- 							<String fx:value="Pear" /> -->
+<!-- 						</FXCollections> -->
+<!-- 					</items> -->
+				</ComboBox>
+				<ComboBox layoutX="95.0" layoutY="695.0" prefHeight="31.0"
+					prefWidth="101.0" promptText="Month" />
+			</children>
+		</Group>
+		<TextField fx:id="username" alignment="CENTER" layoutX="135.0"
+			layoutY="173.0" promptText="Username" />
+		<Label layoutX="113.0" layoutY="414.0" prefHeight="21.0"
+			prefWidth="232.0" />
+		<Label layoutX="131.0" layoutY="743.0" prefHeight="21.0"
+			prefWidth="196.0" />
+		<Label alignment="CENTER" layoutX="57.0" layoutY="49.0"
+			text="Account Information" textAlignment="CENTER" textFill="WHITE"
+			underline="true">
+			<font>
+				<Font name="System Bold" size="35.0" />
+			</font>
+			<effect>
+				<DropShadow />
+			</effect>
+		</Label>
+	</children>
 </AnchorPane>

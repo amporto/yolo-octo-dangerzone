@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="926.0" fitWidth="626.0" layoutX="-147.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/seatingBackground.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffa8" height="559.0" layoutX="14.0" layoutY="221.0" stroke="BLACK" strokeType="INSIDE" width="423.0" />
+      <StackedAreaChart layoutX="9.0" layoutY="221.0" prefHeight="559.0" prefWidth="433.0">
+        <xAxis>
+          <NumberAxis autoRanging="false" label="Hour" minorTickCount="0" minorTickLength="0.0" tickUnit="2.0" upperBound="14.0" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Quantity" side="LEFT" />
+        </yAxis>
+         <effect>
+            <DropShadow />
+         </effect>
+      </StackedAreaChart>
+      <Label layoutX="116.0" layoutY="49.0" text="Today's Sales" textFill="WHITE" underline="true">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label layoutX="9.0" layoutY="182.0" text="Profiting: $" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
