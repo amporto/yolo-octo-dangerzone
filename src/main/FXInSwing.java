@@ -30,9 +30,7 @@ public class FXInSwing extends JFrame {
 		ChangeInfoGUI changeSet=new ChangeInfoGUI();
 		MenuGUI orderMenu=new MenuGUI();
 
-		Platform.runLater(new Runnable() {
-			@Override
-			public void run() {
+		Platform.runLater( () -> {
 
 				try {
 					Parent changeRoot = FXMLLoader.load(getClass().getResource(
@@ -45,7 +43,7 @@ public class FXInSwing extends JFrame {
 				}
 
 			}
-		});
+		);
 
 		Platform.runLater(new Runnable() {
 			@Override
