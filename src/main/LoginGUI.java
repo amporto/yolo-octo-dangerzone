@@ -1,29 +1,24 @@
 package main;
 
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.IOException;
+
 import javax.imageio.ImageIO;
-import javax.swing.*;
- 
-import java.awt.*;
-import java.awt.event.*;
-import java.io.IOException;
-
-import java.io.File;
-import java.io.IOException;
-
-import jxl.Cell;
-import jxl.Sheet;
-import jxl.Workbook;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
 
 import jxl.read.biff.BiffException;
-
-import jxl.write.Label;
-import jxl.write.Number;
-import jxl.write.WritableSheet;
-import jxl.write.WritableWorkbook;
-import jxl.write.WriteException;
-import jxl.write.biff.RowsExceededException;
-
-import java.io.*;
  
 public class LoginGUI {
  // hello this is a test
