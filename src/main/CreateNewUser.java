@@ -62,10 +62,10 @@ public class CreateNewUser{
               
               
               //Read the file
-              File userData=new File("C:\\Users\\spaceman\\workspace\\Starbucks\\src\\main\\Login Database.xls");
+              File userData=new File("./src/main/Login Database.xls");
               
               Workbook loginWorkbook1=Workbook.getWorkbook(userData);
-              WritableWorkbook loginWorkbook=Workbook.createWorkbook(new File("C:\\Users\\spaceman\\workspace\\Starbucks\\src\\main\\Login Database.xls"), loginWorkbook1);
+              WritableWorkbook loginWorkbook=Workbook.createWorkbook(new File("./src/main/Login Database.xls"), loginWorkbook1);
               //WritableSheet loginSheet1=loginWorkbook.createSheet("First Sheet",0);
               String[] loginSheetName=loginWorkbook.getSheetNames();
               WritableSheet loginSheet=loginWorkbook.getSheet(loginSheetName[0]);

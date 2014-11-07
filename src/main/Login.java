@@ -22,7 +22,7 @@ public class Login {
 	  boolean confPass = false;
 	  boolean confInfo = false;
 		
-      Workbook workbook = Workbook.getWorkbook(new File("C:\\Users\\spaceman\\workspace\\Starbucks\\src\\main\\Login Database.xls"));
+      Workbook workbook = Workbook.getWorkbook(new File("./src/main/Login Database.xls"));
      
       Sheet sheet = workbook.getSheet(0);
       

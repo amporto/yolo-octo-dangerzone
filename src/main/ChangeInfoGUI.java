@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class ChangeInfoGUI extends JFXPanel {
+public class ChangeInfoGUI {
 
 	@FXML
 	private TextField username; // = Account.getUsername();
@@ -17,10 +17,6 @@ public class ChangeInfoGUI extends JFXPanel {
 
 	public ChangeInfoGUI() {
 
-		// this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setSize(450, 850);
-		this.setVisible(true);
-		// this.setResizable(false);
 	}
 
 	// Update account information
@@ -35,8 +31,5 @@ public class ChangeInfoGUI extends JFXPanel {
 		System.out.println("Payment Processed"); // check method works
 	}
 
-	public void finalize() throws Throwable {
-
-	}
-
+	
 }
