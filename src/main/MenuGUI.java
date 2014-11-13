@@ -13,10 +13,15 @@ import javax.swing.*;
  * @author Alex Procaccini
  * @version 1.0
  * @created 12-Oct-2014 7:46:02 PM
+ * 
+ * This is the panel where the menu will be displayed. Users can place their orders using this menu.
  */
 public class MenuGUI extends JPanel{
 
 	ButtonGroup buttonGroup = new ButtonGroup();
+	/**
+	 * Constructor for the menu GUI
+	 */
 	public MenuGUI(){
 		BorderLayout menuLayout = new BorderLayout();
 		setLayout(menuLayout);
@@ -54,6 +59,9 @@ public class MenuGUI extends JPanel{
 
 	}
 
+	/**
+	 * Action listener for seeing which button was selected and placing the order
+	 */
 	class OrderListener implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {

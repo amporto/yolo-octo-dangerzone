@@ -6,6 +6,8 @@ package main;
  * @author Alex Procaccini
  * @version 1.0
  * @created 12-Oct-2014 7:46:04 PM
+ * 
+ * This is created when the user places an order
  */
 public class Order {
 
@@ -14,10 +16,17 @@ public class Order {
 	public MenuGUI m_MenuGUI;
 	int time = 5;
 
+	/**
+	 * Parameter-less constructor
+	 */
 	public Order(){
 
 	}
 	
+	/**
+	 * Creates an order for the given item
+	 * @param item - the item the user is ordering
+	 */
 	public Order(String item) {
 		
 	}
@@ -26,8 +35,9 @@ public class Order {
 
 	}
 	/**
-	 * 
-	 * @param inventory
+	 * Checks the availability of an item
+	 * @param inventory - the inventory list
+	 * @return whether or not the item is availible
 	 */
 	public boolean checkAvailability(String[] inventory){
 		return false;
@@ -42,16 +52,16 @@ public class Order {
 	}
 
 	/**
-	 * 
-	 * @param creditCardInfo
+	 * Purchases an item 
+	 * @param creditCardInfo - the user's credit card information
 	 */
 	public void purchaseItems(int creditCardInfo){
 
 	}
 
 	/**
-	 * 
-	 * @param inventory
+	 * Selects the given items 
+	 * @param inventory - the inventory list
 	 */
 	public String[] selectItems(String[] inventory){
 		return null;

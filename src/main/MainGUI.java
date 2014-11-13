@@ -6,6 +6,8 @@ import javax.swing.JFrame;
  * @author Alex Procaccini
  * @version 1.0
  * @created 12-Oct-2014 7:46:01 PM
+ * 
+ * This is the main GUI. Everything will be contained in here
  */
 public class MainGUI extends JFrame {
 
@@ -13,7 +15,10 @@ public class MainGUI extends JFrame {
 	// public UserGUI userGUI = new UserGUI();
 	// public AdminGUI adminGUI = new AdminGUI();
 	public FXInSwing mainMenu = new FXInSwing();
-
+	
+	/**
+	 * Contructor for Main GUI
+	 */
 	public MainGUI() {
 		setSize(450, 800);
 		setTitle("ERAU Starbucks App");
@@ -29,6 +34,9 @@ public class MainGUI extends JFrame {
 
 	}
 
+	/**
+	 * Main method. Initiates the main GUI.
+	 */
 	public static void main(String[] args) {
 		MainGUI gui = new MainGUI();
 	}
