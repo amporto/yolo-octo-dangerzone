@@ -1,9 +1,6 @@
 package main;
 
-
-
 import main.Middleware;
-
 
 /**
  * @author Proco
@@ -18,34 +15,35 @@ public class Account {
 	private String username;
 	public Middleware m_Middleware;
 
-	public Account(){
+	public Account() {
 
 	}
 
 	public void finalize() throws Throwable {
 
 	}
+
 	/**
 	 * 
 	 * @param username
 	 */
-	public void createNewUser(String username){
+	public void createNewUser(String username) {
 
 	}
 
-	public int getCreditCardInfo(){
+	public int getCreditCardInfo() {
 		return 0;
 	}
 
-	public String getPassword(){
+	public String getPassword() {
 		return "";
 	}
 
-	public String getUsername(){
+	public String getUsername() {
 		return "";
 	}
 
-	public boolean isAdmin(){
+	public boolean isAdmin() {
 		return false;
 	}
 
@@ -53,7 +51,7 @@ public class Account {
 	 * 
 	 * @param creditCardInfo
 	 */
-	public void setCreditCardInfo(int creditCardInfo){
+	public void setCreditCardInfo(int creditCardInfo) {
 
 	}
 
@@ -61,7 +59,7 @@ public class Account {
 	 * 
 	 * @param password
 	 */
-	public void setPassword(String password){
+	public void setPassword(String password) {
 
 	}
 
@@ -69,7 +67,7 @@ public class Account {
 	 * 
 	 * @param username
 	 */
-	public void setUsername(String username){
+	public void setUsername(String username) {
 
 	}
-}//end Account
+}// end Account

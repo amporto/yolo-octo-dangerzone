@@ -11,7 +11,22 @@ import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 
+/**
+ * 
+ * @author Brandon Bielefeld
+ * 
+ *         This class is a Test class for the first sprint that integrates my
+ *         interfaces within the tabs of the java swing frame that Alex has
+ *         created.
+ * 
+ */
+
 public class FXInSwing extends JFrame {
+
+	/**
+	 * Instantiate new scenes of each interface that will be added to a panel on
+	 * each tab
+	 */
 
 	JFXPanel panelChangeInfo;
 	JFXPanel panelProfits;

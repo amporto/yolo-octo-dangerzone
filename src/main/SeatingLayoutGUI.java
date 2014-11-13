@@ -5,11 +5,21 @@ import javafx.fxml.FXML;
 
 /**
  * @author Brandon Bielefeld
- * @version 1.0
- * @created 12-Oct-2014 7:46:06 PM
+ * 
+ * 
+ * 
+ *         This class is a controller class for the SeatingLayoutGUI with its
+ *         action listeners.
  */
+
 public class SeatingLayoutGUI {
 
+	/**
+	 * 
+	 * @param event
+	 *            this listens for the AI and sets seating available or not
+	 *            available
+	 */
 	@FXML
 	// change visibility
 	public void visible(ActionEvent event) {
@@ -17,10 +27,15 @@ public class SeatingLayoutGUI {
 		System.out.println("visible Processed"); // check method works
 	}
 
+	/**
+	 * 
+	 * @param event
+	 *            this listner changes the time viewed on the sating layout tab
+	 */
 	// Update Payment information
-	public void payment(ActionEvent event) {
+	public void time(ActionEvent event) {
 		// Account.setCreditCardInfo();
-		System.out.println("Payment Processed"); // check method works
+		System.out.println("time Processed"); // check method works
 	}
 
 }

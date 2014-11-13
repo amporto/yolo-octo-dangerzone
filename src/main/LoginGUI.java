@@ -87,7 +87,7 @@ public class LoginGUI {
             JButton Submit = new JButton("Submit");
             add(Submit, gbc);
             gbc.gridy++;
-            JButton createNewUser=new JButton("Create New Account");
+            JButton createNewUser = new JButton("Create New Account");
             add(createNewUser, gbc);
             
             
@@ -105,21 +105,33 @@ public class LoginGUI {
                 		
 						boolean confInfo = Login.confInfo(Name, Password);
 						
+					/**
+					* If UserInfo is false 
+					*/
 						if (confInfo == false){
-						//Display 'Wrong User Info'
+							/**
+							*  
+							*/
 	               		System.out.println("Wrong User Info");
 	               		userName.setText("");
 	               		passWord.setText("");
 	               		JOptionPane.showMessageDialog(null, "Incorrect Username or Password");
 	               		
 	               	}
-						
+					/**
+					* If UserInfo is true 
+					*/
 						if (confInfo == true){
 						//Open rest of Project GUI
 	               		//System.out.println("Correct User Info");
 	               		//LoginGUI.frame.dispose();
+							
+							/**
+							* Unleash the Main GUI
+							*/
 							new MainGUI();
 	               	}
+						
 						
 					} catch (BiffException e) {
 						// TODO Auto-generated catch block
