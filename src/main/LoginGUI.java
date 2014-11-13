@@ -120,9 +120,6 @@ public class LoginGUI {
 					* If UserInfo is false - deny access / display 'Incorrect Info'
 					*/
 						if (confInfo == false){
-							/**
-							*  
-							*/
 	               		System.out.println("Wrong User Info");
 	               		userName.setText("");
 	               		passWord.setText("");
