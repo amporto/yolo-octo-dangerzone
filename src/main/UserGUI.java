@@ -26,5 +26,6 @@ public class UserGUI extends JTabbedPane{
 		addTab("Seating", seating);
 		addTab("Account", changeInfo);
 		
+		
 	}
 }

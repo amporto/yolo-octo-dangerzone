@@ -17,7 +17,7 @@ public class MainGUI extends JFrame {
 	public FXInSwing mainMenu = new FXInSwing();
 	
 	/**
-	 * Contructor for Main GUI
+	 * Constructor for Main GUI
 	 */
 	public MainGUI() {
 		setSize(450, 800);

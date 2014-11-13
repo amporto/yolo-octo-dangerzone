@@ -11,6 +11,10 @@ import jxl.Workbook;
 
 import jxl.read.biff.BiffException;
 
+/**
+ * @author Jean V
+ * 
+ */
 
 public class Login {
 
@@ -28,10 +32,6 @@ public class Login {
       Workbook workbook = Workbook.getWorkbook(new File("./src/main/Login Database.xls"));
      
       Sheet sheet = workbook.getSheet(0);
-/**
- * @author Jean V
- * @param max - 
- */
       
       int i;
 	  int max = sheet.getRows();

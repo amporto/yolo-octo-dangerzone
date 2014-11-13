@@ -29,8 +29,8 @@ public class MenuGUI extends JPanel{
 		coffeeButton.setActionCommand("Coffee");
 		JRadioButton teaButton = new JRadioButton("Tea");
 		teaButton.setActionCommand("Tea");
-		JRadioButton frappachinoButton = new JRadioButton("Frappachino");
-		frappachinoButton.setActionCommand("Frappachino");
+		JRadioButton frappachinoButton = new JRadioButton("Frappuchino");
+		frappachinoButton.setActionCommand("Frappuchino");
 		JRadioButton muffinButton = new JRadioButton("Muffin");
 		muffinButton.setActionCommand("Muffin");
 		JRadioButton cookieButton = new JRadioButton("Cookie");
