@@ -20,12 +20,17 @@ import javax.swing.UIManager;
 
 import jxl.read.biff.BiffException;
  
+/**
+ * @author Jean V
+ * 	This is the constructor for the main Login GUI
+ */
+
 public class LoginGUI {
  // hello this is a test
     public static void main(String[] args) {
         new LoginGUI();
     }
- 
+   
     public LoginGUI() {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -41,10 +46,16 @@ public class LoginGUI {
                 frame.setSize(450,800);
                 frame.setVisible(true);
                 frame.setLocationRelativeTo(null);
+                
             }
         });
     }
  
+    /**
+     * @author Jean V
+     * 	This contains the JLabel for the Login GUI
+     */
+    
     public class LoginPane extends JLabel {
  
         public LoginPane() {
@@ -106,7 +117,7 @@ public class LoginGUI {
 						boolean confInfo = Login.confInfo(Name, Password);
 						
 					/**
-					* If UserInfo is false 
+					* If UserInfo is false - deny access / display 'Incorrect Info'
 					*/
 						if (confInfo == false){
 							/**
@@ -119,7 +130,7 @@ public class LoginGUI {
 	               		
 	               	}
 					/**
-					* If UserInfo is true 
+					* If UserInfo is true - allow access to main GUI
 					*/
 						if (confInfo == true){
 						//Open rest of Project GUI

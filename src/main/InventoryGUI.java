@@ -5,14 +5,15 @@ import javax.swing.JPanel;
 
 
 /**
- * @author Proco
- * @version 1.0
- * @created 12-Oct-2014 7:45:59 PM
+ * @author JeanV
+ * This class creates the GUI for the inventory as a JPanel
  */
 public class InventoryGUI extends JPanel{
 
 	public InventoryGUI(){
-
+		
+		new InventoryGUI();
+		    
 	}
 
 	public void finalize() throws Throwable {

@@ -28,7 +28,7 @@ public class AdminGUI extends JTabbedPane{
 		addTab("Profits", profitsGUI);
 		addTab("Trends", trendsGUI);
 		addTab("Inventory", inventoryGUI);
-		addTab("Account", changeInfoGUI);
+		//addTab("Account", changeInfoGUI);
 	}
 
 }

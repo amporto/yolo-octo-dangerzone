@@ -37,7 +37,7 @@ public class Order {
 	/**
 	 * Checks the availability of an item
 	 * @param inventory - the inventory list
-	 * @return whether or not the item is availible
+	 * @return whether or not the item is available
 	 */
 	public boolean checkAvailability(String[] inventory){
 		return false;
