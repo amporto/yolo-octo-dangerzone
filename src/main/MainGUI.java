@@ -27,6 +27,8 @@ public class MainGUI extends JFrame {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		add(mainMenu);
+		
+		
 
 	}
 

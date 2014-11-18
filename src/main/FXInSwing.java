@@ -44,10 +44,9 @@ public class FXInSwing extends JFrame {
 		panelChangeInfo = new JFXPanel();
 		panelProfits = new JFXPanel();
 		panelSeatingLayout = new JFXPanel();
-		Inventory = new JFXPanel();
 		ChangeInfoGUI changeSet = new ChangeInfoGUI();
 		MenuGUI orderMenu = new MenuGUI();
-		//InventoryGUI invgui = new InventoryGUI();
+		InventoryGUI invgui = new InventoryGUI();
 		
 		Platform.runLater(() -> {
 
@@ -104,7 +103,7 @@ public class FXInSwing extends JFrame {
 		jtp.addTab("Account", panelChangeInfo);
 		jtp.addTab("Profits", panelProfits);
 		jtp.addTab("Seating", panelSeatingLayout);
-		jtp.addTab("Inventory", Inventory);
+		jtp.addTab("Inventory", invgui);
 
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setSize(450, 800);

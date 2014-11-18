@@ -35,7 +35,7 @@ import jxl.write.WriteException;
 public class Inventory {
 	
 	private String item;
-	private String itemAmount;
+	private static String itemAmount;
 	
 	public Inventory(){
 		
@@ -60,7 +60,7 @@ public class Inventory {
 	}
 	
 	
-	public String getItemAmount() {
+	public static String getItemAmount() {
 		return itemAmount;
 	}
 

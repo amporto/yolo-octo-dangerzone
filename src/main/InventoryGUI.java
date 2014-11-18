@@ -1,5 +1,8 @@
 package main;
 
+import java.awt.Color;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
 import java.io.File;
 import java.io.IOException;
 
@@ -21,14 +24,14 @@ import jxl.write.WritableWorkbook;
  */
 public class InventoryGUI extends JPanel{
 
-	public InventoryGUI() throws BiffException, IOException{
+	public InventoryGUI() {
 		
-File inventory = new File("./src/main/Inventory.xls");
+		File inventory = new File("./src/main/Inventory.xls");
 
 		/**
 		 * Reads Excel file to obtain Items / Quantities
 		 */
-		Workbook inventoryWorkbook1 = Workbook.getWorkbook(inventory);
+	/*	Workbook inventoryWorkbook1 = Workbook.getWorkbook(inventory);
 		Sheet sheet = inventoryWorkbook1.getSheet(0); 
 		int i = 0;
 		int max = sheet.getRows();
@@ -40,16 +43,41 @@ File inventory = new File("./src/main/Inventory.xls");
 	  //To show in GUI
 	    JLabel Item = new JLabel(ITEM);
 	    Cell quantity = sheet.getCell(1, i);
-	    String QUANTITY = quantity.getContents();
-	    
+	   
+	    */
 	  //To show in GUI
+		GridBagConstraints gbc = new GridBagConstraints();
+		gbc.anchor = GridBagConstraints.EAST;
+        gbc.insets = new Insets(2, 2, 2, 2);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        
+        String INVENTORYHEADER = "Inventory";
+        JLabel InventoryHeader = new JLabel(INVENTORYHEADER);
+       
+        // Will change hardcoded string value for GETTER
+        String ITEM = "Frapuccino";
+        JLabel Item = new JLabel(ITEM);
+        
+        //add(nameLabel, gbc);
+		//String QUANTITY = Inventory.getItemAmount();
+        
+        // Will change hardcoded string value for GETTER
+		String QUANTITY = "12";
 	    JLabel Quantity = new JLabel(QUANTITY);
+        
+        add(InventoryHeader, gbc);
+        gbc.gridy++; //doesn't do anything :(
+        add(Item, gbc);
+        gbc.gridx++;
+	    add(Quantity, gbc);
+	   
 	    
 		}
 		
-	}
+
 	
 	public void finalize() throws Throwable {
-
+	
 	}
 }//end InventoryGUI
