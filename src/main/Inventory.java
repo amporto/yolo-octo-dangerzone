@@ -36,7 +36,6 @@ public class Inventory {
 	
 	private String item;
 	private static String itemAmount;
-	
 	public Inventory(){
 		
 		

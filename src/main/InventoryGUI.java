@@ -2,6 +2,7 @@ package main;
 
 import java.awt.Color;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.io.File;
 import java.io.IOException;
@@ -46,9 +47,10 @@ public class InventoryGUI extends JPanel{
 	   
 	    */
 	  //To show in GUI
+		setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
-		gbc.anchor = GridBagConstraints.EAST;
         gbc.insets = new Insets(2, 2, 2, 2);
+        gbc.anchor = GridBagConstraints.NORTH;
         gbc.gridx = 0;
         gbc.gridy = 0;
         
@@ -58,6 +60,9 @@ public class InventoryGUI extends JPanel{
         // Will change hardcoded string value for GETTER
         String ITEM = "Frapuccino";
         JLabel Item = new JLabel(ITEM);
+        
+        String ITEM2 = "Coffee";
+        JLabel Item2 = new JLabel(ITEM2);
         
         //add(nameLabel, gbc);
 		//String QUANTITY = Inventory.getItemAmount();
@@ -71,6 +76,9 @@ public class InventoryGUI extends JPanel{
         add(Item, gbc);
         gbc.gridx++;
 	    add(Quantity, gbc);
+	    gbc.gridx--;
+	    gbc.gridy++;
+	    add(Item2, gbc);
 	   
 	    
 		}
