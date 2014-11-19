@@ -40,10 +40,10 @@ public class Login {
       
       Cell username = sheet.getCell(0, i);
       String USERNAME = username.getContents();
-      System.out.println(USERNAME);
+      //System.out.println(USERNAME);
       Cell password = sheet.getCell(1, i);
       String PASSWORD = password.getContents();
-      System.out.println(PASSWORD);
+      //System.out.println(PASSWORD);
       
       /**
        * Confirm that Info matches w/ Database 
