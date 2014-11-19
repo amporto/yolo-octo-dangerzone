@@ -54,7 +54,7 @@ public class FXInSwing extends JFrame {
 
 				panelChangeInfo.setScene(sceneChange = new Scene(FXMLLoader
 						.load(getClass()
-								.getResource("/fxml/ChangeInfoGUI.fxml"))));
+								.getResource("/fxml/UserGUI.fxml"))));
 
 			} catch (IOException e) {
 				e.printStackTrace();
