@@ -94,13 +94,27 @@ public class LoginPane extends JLabel {
         	CreateNewUser newUser=new CreateNewUser();
         	try {
 				newUser.newAccount(name, pass, card);
+				int cardLength=card.length();
+				
+				if (cardLength==16){
+					
+					new LoginGUI();
+				
+				}
+				
+				else{
+					
+					JOptionPane.showMessageDialog(null, "Credit Card must be 16 digits in length.");
+					cardNum.setText("");
+				}
+					
 				
 			} catch (BiffException | WriteException
 					| IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-        new LoginGUI();
+        
         	
         }       
         
