@@ -45,22 +45,6 @@ public class Inventory extends JLabel {
 		
 		
 	}
-	
-
-	public String getCellContents() throws BiffException, IOException{
-		
-		File inventory = new File("./src/main/Inventory.xls");
-		 Workbook inventoryWorkbook1 = Workbook.getWorkbook(inventory);
-	     WritableWorkbook inventoryWorkbook = Workbook.createWorkbook(new File("./src/main/Inventory.xls"), inventoryWorkbook1);
-	     //WritableSheet loginSheet1=loginWorkbook.createSheet("First Sheet",0);
-	     String[] inventorySheetName = inventoryWorkbook.getSheetNames();
-	     WritableSheet inventorySheet = inventoryWorkbook.getSheet(inventorySheetName[0]);
-	     WritableCell cell = inventorySheet.getWritableCell("B1");
-	     String Contents = cell.getContents();
-	     return Contents;
-		
-	}
-
 
 	public static String getItem() {
 		return item;
@@ -80,6 +64,30 @@ public class Inventory extends JLabel {
 	public static void setItemAmount(String itemAmount) {
 		Inventory.itemAmount = itemAmount;
 	}
+	
+	/**@author Jean V
+	 * This method reads from excel file to obtain inventory info
+	 * To be used by InventoryGUI
+	 * @param Cell
+	 * @return
+	 * @throws BiffException
+	 * @throws IOException
+	 */
+	
+	public static String getCellContents(String Cell) throws BiffException, IOException{
+		
+		File inventory = new File("./src/main/Inventory.xls");
+		 Workbook inventoryWorkbook1 = Workbook.getWorkbook(inventory);
+	     WritableWorkbook inventoryWorkbook = Workbook.createWorkbook(new File("./src/main/Inventory.xls"), inventoryWorkbook1);
+	     //WritableSheet loginSheet1=loginWorkbook.createSheet("First Sheet",0);
+	     String[] inventorySheetName = inventoryWorkbook.getSheetNames();
+	     WritableSheet inventorySheet = inventoryWorkbook.getSheet(inventorySheetName[0]);
+	     WritableCell cell = inventorySheet.getWritableCell(Cell);
+	     String Contents = cell.getContents();
+	     return Contents;
+		
+	}
+
 	
 	/**
 	 * @author Megan Porto

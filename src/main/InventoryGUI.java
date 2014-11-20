@@ -28,7 +28,7 @@ import jxl.write.WritableWorkbook;
  */
 public class InventoryGUI extends Inventory{
 
-	public InventoryGUI() {
+	public InventoryGUI() throws BiffException, IOException {
 		
 		try {
 			setIcon(new ImageIcon(ImageIO.read(getClass().getResource("207n5z7.jpg"))));
@@ -71,20 +71,11 @@ public class InventoryGUI extends Inventory{
         //JLabel InventoryHeader = new JLabel(INVENTORYHEADER);
        
         // Will change hardcoded string value for GETTER
-        String ITEM = null;
-		try {
-			ITEM = getCellContents();
-		} catch (BiffException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        String ITEM = Inventory.getCellContents("A1");
         JLabel Item = new JLabel(ITEM);
         Item.setForeground(Color.WHITE);
         
-        String ITEM2 = "Coffee";
+        String ITEM2 = Inventory.getCellContents("A2");
         JLabel Item2 = new JLabel(ITEM2);
         Item2.setForeground(Color.WHITE);
         
