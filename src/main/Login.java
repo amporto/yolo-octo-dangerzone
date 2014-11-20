@@ -36,7 +36,7 @@ public class Login {
       int i;
 	  int max = sheet.getRows();
       
-      for (i=0; i <= max ; i++){
+      for (i=4; i <= max ; i++){
       
       Cell username = sheet.getCell(0, i);
       String USERNAME = username.getContents();
@@ -74,6 +74,67 @@ public class Login {
     	 return confInfo;
       
    }
+	
+	/**
+	 * This method will confirm the admin account
+	 * @param Name -Username from admin
+	 * @param Password -password from admin
+	 * 
+	 */
 
+	public static boolean confInfoAdmin(String Name, String Password)
+		      throws BiffException, IOException
+		   {
+			  
+			  boolean confName = false;
+			  boolean confPass = false;
+			  boolean confInfo = false;
+				
+		      Workbook workbook = Workbook.getWorkbook(new File("./src/main/Login Database.xls"));
+		     
+		      Sheet sheet = workbook.getSheet(0);
+		      
+		      int i;
+			  
+		      
+		      for (i=0; i <= 3 ; i++){
+		      
+		      Cell username = sheet.getCell(0, i);
+		      String USERNAME = username.getContents();
+		      //System.out.println(USERNAME);
+		      Cell password = sheet.getCell(1, i);
+		      String PASSWORD = password.getContents();
+		      //System.out.println(PASSWORD);
+		      
+		      /**
+		       * Confirm that Info matches w/ Database 
+		       */
+		      confName = (Name.equalsIgnoreCase(USERNAME));
+		      confPass = (Password.equals(PASSWORD));
+		      
+		      /**
+		       * If Info matches 
+		       */
+		      if ((confName == true) && (confPass == true) ){
+		    	 confInfo = true;
+		    	 workbook.close();
+		    	 return confInfo;
+		      
+		      }
+		      
+		      if ((i + 1) == 3){
+		    	 workbook.close();
+		    	 return false;
+		      }
+		   }
+		      /**
+		       * If Info didn't match 
+		       */
+		      	 confInfo = false;
+		    	 workbook.close();
+		    	 return confInfo;
+		      
+		   }
+	
 }
 
