@@ -16,6 +16,7 @@ import javax.swing.JLabel;
 
 import jxl.Cell;
 import jxl.LabelCell;
+import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import jxl.write.Label;
@@ -78,14 +79,19 @@ public class Inventory {
 		
 		File inventory = new File("./src/main/Inventory.xls");
 		 Workbook inventoryWorkbook1 = Workbook.getWorkbook(inventory);
-	     WritableWorkbook inventoryWorkbook = Workbook.createWorkbook(new File("./src/main/Inventory.xls"), inventoryWorkbook1);
+	     //WritableWorkbook inventoryWorkbook = Workbook.createWorkbook(new File("./src/main/Inventory.xls"), inventoryWorkbook1);
 	     //WritableSheet loginSheet1=loginWorkbook.createSheet("First Sheet",0);
-	     String[] inventorySheetName = inventoryWorkbook.getSheetNames();
-	     WritableSheet inventorySheet = inventoryWorkbook.getSheet(inventorySheetName[0]);
-	     WritableCell cell = inventorySheet.getWritableCell(Cell);
+	    // String[] inventorySheetName = inventoryWorkbook.getSheetNames();
+	     Sheet inventorySheet = inventoryWorkbook1.getSheet(0);
+	     Cell cell = inventorySheet.getCell(Cell);
 	     String Contents = cell.getContents();
+	     
+	     inventoryWorkbook1.close();
+	     
 	     return Contents;
 		
+	     
+	     
 	}
 
 	

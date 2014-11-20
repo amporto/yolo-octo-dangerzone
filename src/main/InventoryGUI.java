@@ -74,12 +74,12 @@ public class InventoryGUI extends JLabel{
         String ITEM = null;
 		try {
 			ITEM = Inventory.getCellContents("A1");
-		} catch (BiffException e) {
+		} catch (BiffException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
+			e1.printStackTrace();
+		} catch (IOException e1) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			e1.printStackTrace();
 		}
         JLabel Item = new JLabel(ITEM);
         Item.setForeground(Color.WHITE);
