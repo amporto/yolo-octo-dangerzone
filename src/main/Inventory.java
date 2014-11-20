@@ -34,7 +34,7 @@ import jxl.write.WriteException;
  */
 
 
-public class Inventory extends JLabel {
+public class Inventory {
 	
 	private static String item;
 	private static String itemAmount;
@@ -107,6 +107,7 @@ public class Inventory extends JLabel {
         String[] inventorySheetName = inventoryWorkbook.getSheetNames();
         WritableSheet inventorySheet = inventoryWorkbook.getSheet(inventorySheetName[0]);
 		
+        inventoryWorkbook.close();
 		
 		if (item == "Brewed Coffee"){
 			
