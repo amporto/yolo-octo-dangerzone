@@ -10,14 +10,18 @@ import javafx.stage.Stage;
  * @version 1.0
  * @created 12-Oct-2014 7:46:01 PM
  *
- * This is the GUI for the administrator. Everything they need will be here.
+ *          This is the GUI for the administrator. Everything they need will be
+ *          here.
  */
-public class AdminGUI extends Application{
-	
+public class AdminGUI extends Application {
+
 	public static void main(String[] args) {
 		launch(args);
 	}
 
+	public AdminGUI() {
+
+	}
 
 	/**
 	 * This creates the main interface for the administrator
@@ -25,15 +29,18 @@ public class AdminGUI extends Application{
 	 * @param primaryStage
 	 * @throws Exception
 	 */
-	
+
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		
 		primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource(
 				"/fxml/AdminGUI.fxml"))));
 		primaryStage.setTitle("Admin interface");
-		primaryStage.show();
+
 		primaryStage.setResizable(false);
+		primaryStage.show();
+	}
+
+	public void run() {
 
 	}
 }

@@ -9,6 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+import javafx.application.Application;
+
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -137,8 +139,9 @@ public class LoginGUI {
 							/**
 							* Unleash the Main GUI
 							*/
-							new MainGUI();
+							//new MainGUI();
 							new UserGUI();
+							launch(UserGUI.class, args);
 	               	}
 						
 						
@@ -202,5 +205,4 @@ public class LoginGUI {
         
        
         }
-    }
-
+}
