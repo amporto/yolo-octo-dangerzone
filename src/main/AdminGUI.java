@@ -1,11 +1,9 @@
 package main;
 
-import javax.swing.JTabbedPane;
-
-import main.ChangeInfoGUI;
-import main.InventoryGUI;
-import main.ProfitsGUI;
-import main.TrendsGUI;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * @author Alex Procaccini
@@ -14,21 +12,28 @@ import main.TrendsGUI;
  *
  * This is the GUI for the administrator. Everything they need will be here.
  */
-public class AdminGUI extends JTabbedPane{
+public class AdminGUI extends Application{
 	
-	/**
-	 * Constructor for the admin GUI
-	 */
-	AdminGUI() {
-		ProfitsGUI profitsGUI = new ProfitsGUI();
-		TrendsGUI trendsGUI = new TrendsGUI();
-		InventoryGUI inventoryGUI = new InventoryGUI();
-		ChangeInfoGUI changeInfoGUI = new ChangeInfoGUI();
-
-		addTab("Profits", profitsGUI);
-		addTab("Trends", trendsGUI);
-		addTab("Inventory", inventoryGUI);
-		//addTab("Account", changeInfoGUI);
+	public static void main(String[] args) {
+		launch(args);
 	}
 
+
+	/**
+	 * This creates the main interface for the administrator
+	 * 
+	 * @param primaryStage
+	 * @throws Exception
+	 */
+	
+	@Override
+	public void start(Stage primaryStage) throws Exception {
+		
+		primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource(
+				"/fxml/AdminGUI.fxml"))));
+		primaryStage.setTitle("Admin interface");
+		primaryStage.show();
+		primaryStage.setResizable(false);
+
+	}
 }

@@ -138,6 +138,7 @@ public class LoginGUI {
 							* Unleash the Main GUI
 							*/
 							new MainGUI();
+							new UserGUI();
 	               	}
 						
 						
