@@ -23,8 +23,8 @@ public class UserGUI extends JTabbedPane{
 		ChangeInfoGUI changeInfo = new ChangeInfoGUI();
 		
 		addTab("Order", menu);
-		addTab("Seating", seating);
-		addTab("Account", changeInfo);
+		//addTab("Seating", seating);
+		//addTab("Account", changeInfo);
 		
 		
 	}

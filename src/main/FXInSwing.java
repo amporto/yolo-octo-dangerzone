@@ -39,7 +39,7 @@ public class FXInSwing extends JFrame {
 	Scene sceneProfits;
 	Scene sceneSeating;
 
-	public FXInSwing() {
+	public FXInSwing()  {
 
 		panelChangeInfo = new JFXPanel();
 		panelProfits = new JFXPanel();
@@ -116,7 +116,9 @@ public class FXInSwing extends JFrame {
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
-				new FXInSwing();
+				
+					new FXInSwing();
+				
 			}
 		});
 	}
