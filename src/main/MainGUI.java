@@ -1,45 +1,48 @@
 package main;
 
-import javax.swing.JFrame;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  * @author Alex Procaccini
  * @version 1.0
  * @created 12-Oct-2014 7:46:01 PM
  * 
- * This is the main GUI. Everything will be contained in here
+ *          This is the main GUI. Everything will be contained in here
  */
-public class MainGUI extends JFrame {
 
-	// public LoginGUI loginGUI = new LoginGUI();
-	// public UserGUI userGUI = new UserGUI();
-	// public AdminGUI adminGUI = new AdminGUI();
-	public FXInSwing mainMenu = new FXInSwing();
+public class MainGUI extends Application {
 	
-	/**
-	 * Constructor for Main GUI
-	 */
-	public MainGUI() {
-		setSize(450, 800);
-		setTitle("ERAU Starbucks App");
-		setVisible(false);
-		setResizable(false);
-		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		add(mainMenu);
-		
-		
+//	public MainGUI(boolean isAdmin){
+//		if (isAdmin == true)
+//			startAdmin();
+//			
+//		
+//	}
 
-	}
-
-	public void finalize() throws Throwable {
-
-	}
-
-	/**
-	 * Main method. Initiates the main GUI.
-	 */
 	public static void main(String[] args) {
-		MainGUI gui = new MainGUI();
+		launch(args);
 	}
-}// end MainGUI
+
+	public void startUser(Stage primaryStage) throws Exception {
+
+		primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource(
+				"/fxml/UserGUI.fxml"))));
+		primaryStage.setTitle("User interface");
+		primaryStage.show();
+		primaryStage.setResizable(false);
+
+	}
+	
+	public void startAdmin(Stage primaryStage) throws Exception {
+
+		primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource(
+				"/fxml/AdminGUI.fxml"))));
+		primaryStage.setTitle("Admin interface");
+		primaryStage.show();
+		primaryStage.setResizable(false);
+
+	}
+}
