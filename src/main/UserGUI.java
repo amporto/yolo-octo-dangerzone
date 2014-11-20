@@ -20,6 +20,17 @@ public class UserGUI extends Application{
 	/**
 	 * Constructor for the user GUI
 	 */
+<<<<<<< HEAD
+	public UserGUI(){
+		MenuGUI menu = new MenuGUI();
+		SeatingLayoutGUI seating = new SeatingLayoutGUI();
+		ChangeInfoGUI changeInfo = new ChangeInfoGUI();
+		
+		addTab("Order", menu);
+		//addTab("Seating", seating);
+		//addTab("Account", changeInfo);
+		
+=======
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -39,6 +50,7 @@ public class UserGUI extends Application{
 		primaryStage.show();
 		primaryStage.setResizable(false);
 
+>>>>>>> 7eb4ea783d687b80aa6e782067629c86aede4957
 		
 	}
 }

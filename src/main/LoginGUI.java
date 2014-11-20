@@ -116,12 +116,15 @@ public class LoginGUI {
                 	
                 	try {
                 		
+                		
 						boolean confInfo = Login.confInfo(Name, Password);
-						
+						boolean confInfoAdmin=Login.confInfoAdmin(Name, Password);
 					/**
 					* If UserInfo is false - deny access / display 'Incorrect Info'
 					*/
-						if (confInfo == false){
+						
+
+						if (confInfo == false && confInfoAdmin==false){
 	               		System.out.println("Wrong User Info");
 	               		userName.setText("");
 	               		passWord.setText("");
@@ -139,10 +142,24 @@ public class LoginGUI {
 							/**
 							* Unleash the Main GUI
 							*/
+<<<<<<< HEAD
 							//new MainGUI();
 							new UserGUI();
 							launch(UserGUI.class, args);
+=======
+<<<<<<< HEAD
+							new FXInSwing();
+=======
+							new MainGUI();
+							new UserGUI();
+>>>>>>> 7eb4ea783d687b80aa6e782067629c86aede4957
+>>>>>>> c6eec314a099709f3d0bd2f7c6eec62328424040
 	               	}
+						
+						if (confInfoAdmin==true){
+							
+							new FXInSwing();
+						}
 						
 						
 					} catch (BiffException e) {

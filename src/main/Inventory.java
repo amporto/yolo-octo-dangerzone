@@ -85,6 +85,7 @@ public class Inventory {
 	     Sheet inventorySheet = inventoryWorkbook1.getSheet(0);
 	     Cell cell = inventorySheet.getCell(Cell);
 	     String Contents = cell.getContents();
+	     setItem(Contents);
 	     
 	     inventoryWorkbook1.close();
 	     
