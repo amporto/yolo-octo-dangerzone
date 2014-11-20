@@ -71,7 +71,7 @@ public class InventoryGUI extends JLabel{
         //JLabel InventoryHeader = new JLabel(INVENTORYHEADER);
        
         // Will change hardcoded string value for GETTER
-        String ITEM = null;
+        String ITEM = "FRAPPUCCINO";
 		try {
 			ITEM = Inventory.getCellContents("A1");
 		} catch (BiffException e1) {
@@ -84,7 +84,7 @@ public class InventoryGUI extends JLabel{
         JLabel Item = new JLabel(ITEM);
         Item.setForeground(Color.WHITE);
         
-        String ITEM2 = null;
+        String ITEM2 = "COFFEE";
 		try {
 			ITEM2 = Inventory.getCellContents("A2");
 		} catch (BiffException e) {
@@ -101,9 +101,28 @@ public class InventoryGUI extends JLabel{
 		//String QUANTITY = Inventory.getItemAmount();
         
         // Will change hardcoded string value for GETTER
-		String QUANTITY = Inventory.getItemAmount();
+		String QUANTITY = "10";
 	    JLabel Quantity = new JLabel(QUANTITY);
 	    Quantity.setForeground(Color.WHITE);
+	    
+	    // Will change hardcoded string value for GETTER
+		String QUANTITY2 = "10";
+	    JLabel Quantity2 = new JLabel(QUANTITY2);
+	    Quantity2.setForeground(Color.WHITE);
+	    
+		try {
+			ITEM2 = Inventory.getCellContents("A2");
+		} catch (BiffException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        
+		String ITEM3 = "COOKIE";
+		JLabel Item3 = new JLabel(ITEM3);
+		Item3.setForeground(Color.WHITE);
         
        // add(InventoryHeader);
         gbc.gridy++;
@@ -113,6 +132,10 @@ public class InventoryGUI extends JLabel{
 	    gbc.gridx = 0;
 	    gbc.gridy++;
 	    add(Item2, gbc);
+	    gbc.gridx++;
+	    add(Quantity2, gbc);
+	    gbc.gridy++;
+	    add(Item3, gbc);
 	   
 	    
 		}
