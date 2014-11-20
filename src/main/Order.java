@@ -103,7 +103,7 @@ public class Order {
         String[] inventorySheetName=inventoryWorkbook.getSheetNames();
         WritableSheet inventorySheet=inventoryWorkbook.getSheet(inventorySheetName[0]);	
         
-<<<<<<< HEAD
+
         int i;
         for (i=0; i<19; i++){
         	

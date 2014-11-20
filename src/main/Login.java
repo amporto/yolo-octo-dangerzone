@@ -48,7 +48,7 @@ public class Login {
       /**
        * Confirm that Info matches w/ Database 
        */
-      confName = (Name.equals(USERNAME));
+      confName = (Name.equalsIgnoreCase(USERNAME));
       confPass = (Password.equals(PASSWORD));
       
       /**
