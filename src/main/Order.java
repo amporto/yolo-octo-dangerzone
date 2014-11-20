@@ -83,9 +83,6 @@ File inventory=new File("./src/main/Inventory.xls");
         String[] inventorySheetName=inventoryWorkbook.getSheetNames();
         WritableSheet inventorySheet=inventoryWorkbook.getSheet(inventorySheetName[0]);	
         
-        
-        
-        
 	}
 
 	/**
