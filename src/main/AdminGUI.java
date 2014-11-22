@@ -1,6 +1,12 @@
 package main;
 
+import java.io.IOException;
+
+import javax.swing.JFrame;
+
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -13,34 +19,32 @@ import javafx.stage.Stage;
  *          This is the GUI for the administrator. Everything they need will be
  *          here.
  */
-public class AdminGUI extends Application {
-
-	public static void main(String[] args) {
-		launch(args);
-	}
-
-	public AdminGUI() {
-
-	}
+public class AdminGUI extends JFXPanel {
 
 	/**
-	 * This creates the main interface for the administrator
-	 * 
-	 * @param primaryStage
-	 * @throws Exception
+	 * Instantiate new scenes of each interface that will be added to a panel on
+	 * each tab
 	 */
 
-	@Override
-	public void start(Stage primaryStage) throws Exception {
-		primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource(
-				"/fxml/AdminGUI.fxml"))));
-		primaryStage.setTitle("Admin interface");
-
-		primaryStage.setResizable(false);
-		primaryStage.show();
+	public AdminGUI() {
+		Platform.runLater(() -> {
+			try {
+				this.setScene(new Scene(FXMLLoader.load(getClass().getResource(
+						"/fxml/AdminGUI.fxml"))));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		});
 	}
 
-	public void run() {
+	public static void main(String[] args) {
 
+		JFrame frame = new JFrame("Login");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(new AdminGUI());
+		frame.setSize(450, 800);
+		frame.setLocationRelativeTo(null);
+		frame.setResizable(false);
+		frame.setVisible(true);
 	}
 }
