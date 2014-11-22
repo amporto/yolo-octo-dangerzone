@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.web.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -11,7 +12,7 @@
   <tabs>
     <Tab text="Order">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="767.0" prefWidth="478.0" style="-fx-background-color: #444444;">
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="767.0" prefWidth="478.0" style="-fx-background-image: /home/alex/workspace/SE300-2/src/fxml/images/background.png; -fx-background-color: #444444;">
                <children>
                   <Label layoutX="41.0" layoutY="61.0" text="What would you like to order?" textFill="WHITE">
                      <font>
@@ -25,40 +26,77 @@
                               <GridPane style="-fx-background-color: #444444;">
                                 <columnConstraints>
                                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                 </columnConstraints>
                                 <rowConstraints>
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE">
+                                    <RadioButton mnemonicParsing="false" text="Coffee" textFill="WHITE">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton mnemonicParsing="false" text="Americano" textFill="WHITE" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="2">
-                                       <font>
-                                          <Font name="Caviar Dreams" size="13.0" />
-                                       </font>
-                                    </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="3">
-                                       <font>
-                                          <Font name="Caviar Dreams" size="13.0" />
-                                       </font>
-                                    </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="4">
-                                       <font>
-                                          <Font name="Caviar Dreams" size="13.0" />
-                                       </font>
-                                    </RadioButton>
+                                    <GridPane GridPane.columnIndex="1">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
                                  </children>
                               </GridPane>
                            </content>
@@ -70,33 +108,169 @@
                            <content>
                               <GridPane style="-fx-background-color: #444444;">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE">
+                                    <RadioButton mnemonicParsing="false" text="Black Tea" textFill="WHITE">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton mnemonicParsing="false" text="Zen" textFill="WHITE" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="2">
+                                    <RadioButton mnemonicParsing="false" text="Tea. Earl Grey. Hot." textFill="WHITE" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="3">
+                                    <RadioButton mnemonicParsing="false" text="Vanilla Rooibos" textFill="WHITE" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="4">
+                                    <RadioButton mnemonicParsing="false" text="Chai Latte" textFill="WHITE" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
+                                    <GridPane GridPane.columnIndex="1">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
                                  </children>
                                  <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                  </columnConstraints>
                                  <rowConstraints>
@@ -116,36 +290,453 @@
                            <content>
                               <GridPane style="-fx-background-color: #444444;">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE">
+                                    <RadioButton mnemonicParsing="false" text="Mocha Frappuccino" textFill="WHITE">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton mnemonicParsing="false" text="White Mocha Frappuccino" textFill="WHITE" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="2">
+                                    <RadioButton mnemonicParsing="false" text="Chocolate Frappuccino" textFill="WHITE" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="3">
+                                    <RadioButton mnemonicParsing="false" text="Vanilla Frappuccino" textFill="WHITE" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="4">
+                                    <RadioButton mnemonicParsing="false" text="Caramel Frappuccino" textFill="WHITE" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Hazelnut Frappuccino" textFill="WHITE" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <GridPane GridPane.columnIndex="1">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
                                  </children>
                                  <columnConstraints>
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                  </columnConstraints>
                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                           <font>
+                              <Font name="Caviar Dreams" size="13.0" />
+                           </font>
+                        </TitledPane>
+                        <TitledPane animated="false" layoutX="10.0" layoutY="62.0" text="Espresso Drinks">
+                           <content>
+                              <GridPane style="-fx-background-color: #444444;">
+                                 <children>
+                                    <RadioButton mnemonicParsing="false" text="Latte" textFill="WHITE">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Cappuccino" textFill="WHITE" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Mocha" textFill="WHITE" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="White Mocha" textFill="WHITE" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Caramel Macchiato" textFill="WHITE" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Hazelnut Macchiato" textFill="WHITE" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Vanilla Latte" textFill="WHITE" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <GridPane GridPane.columnIndex="1">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                       <children>
+                                          <RadioButton mnemonicParsing="false" text="Tall" textFill="WHITE">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Venti" textFill="WHITE" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                          <RadioButton mnemonicParsing="false" text="Grande" textFill="WHITE" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Caviar Dreams" size="13.0" />
+                                             </font>
+                                          </RadioButton>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="65.0" minWidth="10.0" prefWidth="62.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="83.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="79.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -162,27 +753,32 @@
                            <content>
                               <GridPane style="-fx-background-color: #444444;">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE">
+                                    <RadioButton mnemonicParsing="false" text="Chocolate Chip Cookie" textFill="WHITE">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton mnemonicParsing="false" text="Cranberry Scone" textFill="WHITE" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="2">
+                                    <RadioButton mnemonicParsing="false" text="Blueberry Scone" textFill="WHITE" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="3">
+                                    <RadioButton mnemonicParsing="false" text="Vanilla Scone" textFill="WHITE" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="RadioButton" textFill="WHITE" GridPane.rowIndex="4">
+                                    <RadioButton mnemonicParsing="false" text="Blueberry Muffin" textFill="WHITE" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Caviar Dreams" size="13.0" />
+                                       </font>
+                                    </RadioButton>
+                                    <RadioButton mnemonicParsing="false" text="Brownie" textFill="WHITE" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
@@ -192,6 +788,7 @@
                                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                  </columnConstraints>
                                  <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
