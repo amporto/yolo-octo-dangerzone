@@ -40,27 +40,26 @@ public class InventoryGUI extends JLabel{
 			e.printStackTrace();
 		}
    
-		setLayout(new GridLayout(0,2,0,0));
+		setLayout(new GridLayout(0,1,0,0));
 		GridBagConstraints gbc = new GridBagConstraints();
         //gbc.insets = new Insets(2, 2, 2, 2);
         gbc.anchor = GridBagConstraints.NORTH;
         gbc.gridx = 0;
         gbc.gridy = 0;
         
-        JLabel Header = new JLabel("Inventory");
-        JButton Update = new JButton("Update");
+        JButton Update = new JButton("Get Updated Inventory");
 		 
-         add(Header, gbc);
 		 add(Update, gbc);
 		
-
          Update.addActionListener(new ActionListener(){
          public void actionPerformed(ActionEvent ev1) {
 		
 		try {
 			
 			int i;
-			int max = 20;
+			int max = 23;
+			
+			setLayout(new GridLayout(0,2,0,0));
 			
 			//Clear for Updates
 			removeAll(); 
@@ -72,11 +71,7 @@ public class InventoryGUI extends JLabel{
 			String BcellLocation = "B"+i;
 			
 			String ITEM = Inventory.getCellContents(AcellLocation);
-			//String ITEM2 = Inventory.getCellContents("A2");
-			//String ITEM3 = Inventory.getCellContents("A3");
-			
 			String QUANTITY = Inventory.getCellContents(BcellLocation);
-			//String QUANTITY2 = Inventory.getCellContents("B2");
 			
 			JLabel Item = new JLabel(ITEM);
 		    Item.setForeground(Color.WHITE);
