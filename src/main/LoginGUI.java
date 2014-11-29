@@ -140,12 +140,11 @@ public class LoginGUI {
 							/**
 							* Unleash the Main GUI
 							*/
-<<<<<<< HEAD
+
 							new FXInSwing();
-=======
-							new MainGUI();
-							new UserGUI();
->>>>>>> 7eb4ea783d687b80aa6e782067629c86aede4957
+
+							
+
 	               	}
 						
 						if (confInfoAdmin==true){
