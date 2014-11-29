@@ -138,11 +138,25 @@ public class LoginGUI {
 							// LoginGUI.frame.dispose();
 
 							/**
+<<<<<<< HEAD
+							* Unleash the Main GUI
+							*/
+
+							//new FXInSwing();
+
+							new MainGUI();
+							//new UserGUI();
+
+	               	}
+						
+						if (confInfoAdmin==true){
+=======
 							 * Unleash the Main GUI
 							 */
 						//	Application.launch (UserGUI.class, null);
 							JFXPanel user = new UserGUI();
 							frame.add(user);
+>>>>>>> ba8576f2eaa626c362381d375e9a7d4239be7259
 							
 
 						}
