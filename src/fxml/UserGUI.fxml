@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.web.*?>
 <?import javafx.scene.shape.*?>
@@ -14,11 +17,17 @@
       <content>
         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="767.0" prefWidth="478.0" style="-fx-background-image: /home/alex/workspace/SE300-2/src/fxml/images/background.png; -fx-background-color: #444444;">
                <children>
-                  <Label layoutX="41.0" layoutY="61.0" text="What would you like to order?" textFill="WHITE">
+                  <Label layoutX="96.0" layoutY="60.0" text="What would you" textFill="WHITE">
                      <font>
-                        <Font name="Caviar Dreams" size="27.0" />
+                        <Font name="Caviar Dreams" size="35.0" />
                      </font>
                   </Label>
+                  <Label layoutX="121.0" layoutY="102.0" text="like to order?" textFill="WHITE">
+                     <font>
+                        <Font name="Caviar Dreams" size="35.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="197.0" layoutY="291.0" mnemonicParsing="false" onAction="#order" text="Order" />
                   <Accordion layoutY="357.0" prefHeight="410.0" prefWidth="450.0">
                     <panes>
                       <TitledPane animated="false" text="Coffee">
@@ -33,12 +42,15 @@
                                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                 </rowConstraints>
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="Coffee" textFill="WHITE">
+                                    <RadioButton fx:id="Coffee" mnemonicParsing="false" text="Coffee" textFill="WHITE">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="item" />
+                                       </toggleGroup>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Americano" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton fx:id="Americano" mnemonicParsing="false" text="Americano" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
@@ -108,27 +120,27 @@
                            <content>
                               <GridPane style="-fx-background-color: #444444;">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="Black Tea" textFill="WHITE">
+                                    <RadioButton fx:id="Black_Tea" mnemonicParsing="false" text="Black Tea" textFill="WHITE" toggleGroup="$item">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Zen" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton fx:id="Zen" mnemonicParsing="false" text="Zen" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Tea. Earl Grey. Hot." textFill="WHITE" GridPane.rowIndex="2">
+                                    <RadioButton fx:id="Earl_Grey" mnemonicParsing="false" text="Tea. Earl Grey. Hot." textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Vanilla Rooibos" textFill="WHITE" GridPane.rowIndex="3">
+                                    <RadioButton fx:id="Vanilla_Rooibos" mnemonicParsing="false" text="Vanilla Rooibos" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Chai Latte" textFill="WHITE" GridPane.rowIndex="4">
+                                    <RadioButton fx:id="Chai_Latte" mnemonicParsing="false" text="Chai Latte" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
@@ -290,32 +302,32 @@
                            <content>
                               <GridPane style="-fx-background-color: #444444;">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="Mocha Frappuccino" textFill="WHITE">
+                                    <RadioButton fx:id="Mocha_Frappuccino" mnemonicParsing="false" text="Mocha Frappuccino" textFill="WHITE" toggleGroup="$item">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="White Mocha Frappuccino" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton fx:id="White_Mocha_Frappuccino" mnemonicParsing="false" text="White Mocha Frappuccino" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Chocolate Frappuccino" textFill="WHITE" GridPane.rowIndex="2">
+                                    <RadioButton fx:id="Chocolate_Frappuccino" mnemonicParsing="false" text="Chocolate Frappuccino" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Vanilla Frappuccino" textFill="WHITE" GridPane.rowIndex="3">
+                                    <RadioButton fx:id="Vanilla_Frappuccino" mnemonicParsing="false" text="Vanilla Frappuccino" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Caramel Frappuccino" textFill="WHITE" GridPane.rowIndex="4">
+                                    <RadioButton fx:id="Caramel_Frappuccino" mnemonicParsing="false" text="Caramel Frappuccino" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Hazelnut Frappuccino" textFill="WHITE" GridPane.rowIndex="5">
+                                    <RadioButton fx:id="Hazelnut_Frappuccino" mnemonicParsing="false" text="Hazelnut Frappuccino" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
@@ -505,37 +517,37 @@
                            <content>
                               <GridPane style="-fx-background-color: #444444;">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="Latte" textFill="WHITE">
+                                    <RadioButton fx:id="Latte" mnemonicParsing="false" text="Latte" textFill="WHITE" toggleGroup="$item">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Cappuccino" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton fx:id="Cappuccino" mnemonicParsing="false" text="Cappuccino" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Mocha" textFill="WHITE" GridPane.rowIndex="2">
+                                    <RadioButton fx:id="Mocha" mnemonicParsing="false" text="Mocha" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="White Mocha" textFill="WHITE" GridPane.rowIndex="3">
+                                    <RadioButton fx:id="White_Mocha" mnemonicParsing="false" text="White Mocha" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Caramel Macchiato" textFill="WHITE" GridPane.rowIndex="4">
+                                    <RadioButton fx:id="Caramel_Macchiato" mnemonicParsing="false" text="Caramel Macchiato" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Hazelnut Macchiato" textFill="WHITE" GridPane.rowIndex="5">
+                                    <RadioButton fx:id="Hazelnut_Macchiato" mnemonicParsing="false" text="Hazelnut Macchiato" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Vanilla Latte" textFill="WHITE" GridPane.rowIndex="6">
+                                    <RadioButton fx:id="Vanilla_Latte" mnemonicParsing="false" text="Vanilla Latte" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="6">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
@@ -753,32 +765,32 @@
                            <content>
                               <GridPane style="-fx-background-color: #444444;">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="Chocolate Chip Cookie" textFill="WHITE">
+                                    <RadioButton fx:id="Chocolate_Chip_Cookie" mnemonicParsing="false" text="Chocolate Chip Cookie" textFill="WHITE" toggleGroup="$item">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Cranberry Scone" textFill="WHITE" GridPane.rowIndex="1">
+                                    <RadioButton fx:id="Cranberry_Scone" mnemonicParsing="false" text="Cranberry Scone" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="1">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Blueberry Scone" textFill="WHITE" GridPane.rowIndex="2">
+                                    <RadioButton fx:id="Blueberry_Scone" mnemonicParsing="false" text="Blueberry Scone" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="2">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Vanilla Scone" textFill="WHITE" GridPane.rowIndex="3">
+                                    <RadioButton fx:id="Vanilla_Scone" mnemonicParsing="false" text="Vanilla Scone" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="3">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Blueberry Muffin" textFill="WHITE" GridPane.rowIndex="4">
+                                    <RadioButton fx:id="Blueberry_Muffin" mnemonicParsing="false" text="Blueberry Muffin" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="4">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="Brownie" textFill="WHITE" GridPane.rowIndex="5">
+                                    <RadioButton fx:id="Brownie" mnemonicParsing="false" text="Brownie" textFill="WHITE" toggleGroup="$item" GridPane.rowIndex="5">
                                        <font>
                                           <Font name="Caviar Dreams" size="13.0" />
                                        </font>
@@ -803,19 +815,126 @@
                         </TitledPane>
                     </panes>
                   </Accordion>
-                  <Button layoutX="194.0" layoutY="332.0" mnemonicParsing="false" onAction="#order" text="Order" />
                </children>
             </AnchorPane>
       </content>
     </Tab>
     <Tab text="Layout">
       <content>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="73.0" layoutY="75.0" text="Wait Time:" textFill="WHITE">
+                     <font>
+                        <Font name="Caviar Dreams" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="73.0" layoutY="33.0" text="Seating Availability" textFill="WHITE">
+                     <font>
+                        <Font name="Caviar Dreams" size="35.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#444444" height="488.0" layoutX="16.0" layoutY="238.0" stroke="WHITE" strokeType="INSIDE" width="421.0" />
+                  <Group>
+                     <children>
+                        <GridPane layoutX="21.0" layoutY="242.0" prefHeight="484.0" prefWidth="409.0">
+                           <children>
+                              <Circle fill="#ff2121" radius="26.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#65ff1f" height="63.0" stroke="BLACK" strokeType="INSIDE" width="53.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+                              <Circle fill="#ff2121" radius="26.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                              <Circle fill="#ff2121" radius="26.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                              <Circle fill="#1fff28" onMouseClicked="#visible" radius="26.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                              <Circle fill="#1fff28" radius="26.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                              <Circle fill="#1fff28" radius="26.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff2121" height="63.0" stroke="BLACK" strokeType="INSIDE" width="53.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </Group>
+               </children></AnchorPane>
       </content>
     </Tab>
       <Tab text="Settings">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="67.0" layoutY="36.0" text="Account Information" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Caviar Dreams" size="35.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="21.0" prefWidth="196.0" />
+                  <Label prefHeight="21.0" prefWidth="232.0" />
+                  <TextField fx:id="username" alignment="CENTER" layoutX="140.0" layoutY="97.0" promptText="Username" />
+                  <Group>
+                     <children>
+                        <TextField layoutX="287.0" layoutY="650.0" prefHeight="31.0" prefWidth="73.0" promptText="CVV" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="142.0" layoutX="90.0" layoutY="485.0" stroke="#00000031" strokeType="INSIDE" width="270.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <fill>
+                              <LinearGradient endX="0.17475728155339804" endY="0.8495145631067962" startX="0.17475728155339806">
+                                 <stops>
+                                    <Stop color="#ffffff00" />
+                                    <Stop color="#ffffff00" offset="0.007246376811594203" />
+                                    <Stop color="#ffffffa2" offset="0.4057971014492754" />
+                                    <Stop color="#206b3e" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </fill>
+                        </Rectangle>
+                        <Label alignment="CENTER" layoutX="67.0" layoutY="429.0" text="Payment Information" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Caviar Dreams" size="35.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="90.0" layoutY="681.0" mnemonicParsing="false" onAction="#payment" prefHeight="41.0" prefWidth="270.0" text="Verify">
+                           <graphic>
+                              <TextField fx:id="paymentCard" onAction="#payment" promptText="Digits" />
+                           </graphic>
+                        </Button>
+                        <Text fill="WHITE" layoutX="115.0" layoutY="594.0" strokeType="OUTSIDE" strokeWidth="0.0" text="XXXX XXXX XXXX XXXX">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Text>
+                        <ImageView fitHeight="83.0" fitWidth="75.0" layoutX="293.0" layoutY="514.0" pickOnBounds="true" preserveRatio="true">
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <image>
+                              <Image url="@images/starbucksLogo.png" />
+                           </image>
+                        </ImageView>
+                        <ComboBox fx:id="comboYear" layoutX="192.0" layoutY="650.0" prefHeight="31.0" prefWidth="95.0" promptText="Year" />
+                        <ComboBox layoutX="91.0" layoutY="650.0" prefHeight="31.0" prefWidth="101.0" promptText="Month" />
+                     </children>
+                  </Group>
+                  <Button layoutX="181.0" layoutY="265.0" mnemonicParsing="false" onAction="#account" prefHeight="31.0" prefWidth="88.0" text="Update" />
+                  <TextField alignment="CENTER" layoutX="140.0" layoutY="209.0" promptText="Confirm Password" />
+                  <TextField alignment="CENTER" layoutX="140.0" layoutY="173.0" promptText="New Password" />
+                  <TextField alignment="CENTER" layoutX="140.0" layoutY="136.0" promptText="Current Password" />
+               </children></AnchorPane>
         </content>
       </Tab>
   </tabs>
