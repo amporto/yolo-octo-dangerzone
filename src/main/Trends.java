@@ -22,6 +22,10 @@ public class Trends {
 		
 	}
 	
+	public Trends(String item){
+		
+		this.item=item;
+	}
 	
 	
 	public static void setTrends(String item) throws RowsExceededException, WriteException, BiffException, IOException{

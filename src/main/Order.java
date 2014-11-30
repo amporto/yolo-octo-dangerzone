@@ -32,6 +32,8 @@ public class Order {
 	public Inventory m_Inventory;
 	public Account m_Account;
 	public MenuGUI m_MenuGUI;
+	public Trends m_Trends;
+	public Profits m_Profits;
 	int time = 5;
 	private String item;
 	private String size;
@@ -124,7 +126,8 @@ public class Order {
             	size = Integer.toString(newSize);
             	
             	Inventory.alterItemAmount(item, size);
-            	
+            	Trends.setTrends(item);
+            	Profits.setProfits(item, size);
             }
             
             
