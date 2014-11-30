@@ -1,6 +1,7 @@
 package main;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
@@ -13,8 +14,11 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import jxl.Cell;
 import jxl.Sheet;
@@ -22,6 +26,7 @@ import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
+import jxl.write.WriteException;
 
 
 
@@ -59,7 +64,7 @@ public class InventoryGUI extends JLabel{
 			int i;
 			int max = 23;
 			
-			setLayout(new GridLayout(0,2,0,0));
+			setLayout(new GridLayout(0,3,0,0));
 			
 			//Clear for Updates
 			removeAll(); 
@@ -73,6 +78,42 @@ public class InventoryGUI extends JLabel{
 			String ITEM = Inventory.getCellContents(AcellLocation);
 			String QUANTITY = Inventory.getCellContents(BcellLocation);
 			
+			JButton edit = new JButton("Edit");
+			 edit.addActionListener(new ActionListener(){
+			     public void actionPerformed(ActionEvent ev1) {
+			    	
+			    	 final String[] Items = { "Brewed Coffee", "Espresso", "Nonfat Milk", "Soymilk", "Whole Milk", "Whipped Creme", "Vanilla Syrup", "Caramel Syrup", "Hazelnut Syrup", "Chocolate Syrup", "White Chocolate Syrup", "Chai Latte Mix", "Black Tea", "Earl Grey", "Zen", "Vanilla Rooibos", "Chocolate Cookie", "Cranberry Scone", "Blueberry Scone", "Vanilla Scone", "Blueberry Muffin", "Brownie" };
+			    	    String ChooseItem = (String) JOptionPane.showInputDialog(edit, 
+			    	        "Choose an Item",
+			    	        "Item",
+			    	        JOptionPane.QUESTION_MESSAGE, 
+			    	        null, 
+			    	        Items, 
+			    	        Items[0]);
+			    	    
+			    	   if (ChooseItem != null){
+			    		   
+			    		   String NewQuantity = JOptionPane.showInputDialog("New Quantity: ", null);
+			    		   
+			    		 try {
+							Inventory.alterItemAmount(ChooseItem, NewQuantity.toString());
+						} catch (BiffException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (WriteException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+			    		   
+			    	   }
+			    	 
+			    	    
+			     }
+				 });
+			
 			JLabel Item = new JLabel(ITEM);
 		    Item.setForeground(Color.WHITE);
 			
@@ -83,10 +124,14 @@ public class InventoryGUI extends JLabel{
 		     add(Item, gbc);
 		     gbc.gridx++;
 			 add(Quantity, gbc);
+			 gbc.gridx++;
+			 add(edit, gbc);
 			 
 			 add(Update);
 			 
 			 repaint();
+			 
+			 
 			 }
 			 
 		} catch (BiffException e1) {
