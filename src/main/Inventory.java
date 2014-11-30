@@ -125,16 +125,20 @@ public class Inventory {
 		    if (acontent.equalsIgnoreCase(item)){
 			
 			WritableCell bcell = inventorySheet.getWritableCell(BCellLocation);
+
 			Label newStuff = new Label(1, i-1, itemAmount);
 			inventorySheet.addCell(newStuff);
 			
 			inventoryWorkbook.write();
+
 			
 		    }
-			
+		
 		}
 		
+
 		inventoryWorkbook.close();
+
 	}
 
 
