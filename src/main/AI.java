@@ -52,8 +52,12 @@ public class AI implements Runnable{
 
 	public static String chooseRandomItem(){
 		
-		int index = randomGenerator.nextInt(menuItems.length);
-		String item = menuItems[index];
+		//int index = randomGenerator.nextInt(menuItems.length);
+		
+		//String item = menuItems[index];
+		
+		String item = "Espresso"; //For testing -Jean
+		
 		return item;
 		
 	}
@@ -61,13 +65,11 @@ public class AI implements Runnable{
 	static ActionListener actList = new ActionListener(){
 		public void actionPerformed(ActionEvent event) {
 			
-			String RandomItem = chooseRandomItem();
-			System.out.println("Subtracted from" + RandomItem);
 			
 			try {
-				
+				String RandomItem = chooseRandomItem();
+				System.out.println("Subtracted from " + RandomItem);
 				Order.makeOrder(RandomItem, "1");
-				
 			} catch (BiffException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -78,6 +80,8 @@ public class AI implements Runnable{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+				
+		
 			
 	}
 	};

@@ -33,8 +33,8 @@ public class Order {
 	public Inventory m_Inventory;
 	public Account m_Account;
 	public MenuGUI m_MenuGUI;
-	public Trends m_Trends;
-	public Profits m_Profits;
+	//public Trends m_Trends;
+	//public Profits m_Profits;
 	int time = 5;
 	private String item;
 	private String size;
@@ -99,20 +99,14 @@ public class Order {
 	public static void makeOrder(String item, String size) throws BiffException, IOException, WriteException{
 		
 		File inventory=new File("./src/main/Inventory.xls");
-        
         Workbook inventoryWorkbook1=Workbook.getWorkbook(inventory);
-        
-        //WritableWorkbook inventoryWorkbook=Workbook.createWorkbook(new File("./src/main/Inventory.xls"), inventoryWorkbook1);
-        //WritableSheet loginSheet1=loginWorkbook.createSheet("First Sheet",0);
-        
-        String[] inventorySheetName=inventoryWorkbook1.getSheetNames();
-        Sheet inventorySheet=inventoryWorkbook1.getSheet(inventorySheetName[0]);	
+        Sheet inventorySheet=inventoryWorkbook1.getSheet(0);	
         
 
         int i = 1;
         int max = 22;
         
-        for (i=0; i<=max; i++){
+        for (i=1; i<=max; i++){
         	
         	String ACellLocation = "A"+i;
 			String BCellLocation = "B"+i;
@@ -122,18 +116,24 @@ public class Order {
 		    
 		    Cell bcell = inventorySheet.getCell(BCellLocation);
             
-            if (acontent == item){
+            if (acontent.equals(item) == true){
             	
             	int bcontent = Integer.parseInt(bcell.getContents());
+            	
+            	//while (bcontent >= 0){
+            	
             	int newSize = bcontent - Integer.parseInt(size);
             	size = Integer.toString(newSize);
+            	Inventory.alterItemAmount(item, size);
             	
-            	inventoryWorkbook1.close();
+            	//}
+            	
+            	
+            	//inventoryWorkbook1.close();
             	//inventoryWorkbook.close();
             	
-            	Inventory.alterItemAmount(item, size);
-            	Trends.setTrends(item);
-            	Profits.setProfits(item, size);
+            	//Trends.setTrends(item);
+            	//Profits.setProfits(item, size);
             }
             
             
