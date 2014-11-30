@@ -93,7 +93,7 @@ public class Order {
 	 */
 	
 	
-	public void makeOrder(String item, String size) throws BiffException, IOException, WriteException{
+	public static void makeOrder(String item, String size) throws BiffException, IOException, WriteException{
 		
 		File inventory=new File("./src/main/Inventory.xls");
         
@@ -104,17 +104,26 @@ public class Order {
         WritableSheet inventorySheet=inventoryWorkbook.getSheet(inventorySheetName[0]);	
         
 
-        int i;
-        for (i=0; i<19; i++){
+        int i = 1;
+        int max = 22;
+        
+        for (i=0; i<=max; i++){
         	
-        	Cell itemName = inventorySheet.getCell(0, i);
-            String menuItem = itemName.getContents();
+        	String ACellLocation = "A"+i;
+			String BCellLocation = "B"+i;
+			
+		    Cell acell = inventorySheet.getCell(ACellLocation);
+		    String acontent = acell.getContents();
+		    
+		    Cell bcell = inventorySheet.getCell(BCellLocation);
             
-            if (menuItem==item){
+            if (acontent == item){
             	
-            	m_Inventory.alterItemAmount(item, size);
+            	int bcontent = Integer.parseInt(bcell.getContents());
+            	int newSize = bcontent - Integer.parseInt(size);
+            	size = Integer.toString(newSize);
             	
-            	
+            	Inventory.alterItemAmount(item, size);
             	
             }
             

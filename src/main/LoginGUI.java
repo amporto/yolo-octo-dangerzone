@@ -12,6 +12,7 @@ import java.io.IOException;
 //import javafx.embed.swing.JFXPanel;
 
 
+
 import javafx.embed.swing.JFXPanel;
 
 import javax.imageio.ImageIO;
@@ -24,6 +25,7 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 
 import jxl.read.biff.BiffException;
+import jxl.write.WriteException;
 
 /**
  * @author Jean V This is the constructor for the main Login GUI
@@ -153,6 +155,7 @@ public class LoginGUI {
 							//new FXInSwing();
 
 							new MainGUI();
+							new AI();
 							//new UserGUI();
 
 
@@ -164,7 +167,7 @@ public class LoginGUI {
 							 * Unleash the Main GUI
 							 */
 						//	Application.launch (UserGUI.class, null);
-							JFXPanel user = new UserGUI();
+							//JFXPanel user = new UserGUI();
 							//frame.add(user);
 /*
 >>>>>>> ba8576f2eaa626c362381d375e9a7d4239be7259
@@ -175,6 +178,7 @@ public class LoginGUI {
 
 						if (confInfoAdmin == true) {
 							// new AdminGUI();
+							new AI();
 							new FXInSwing();
 						}
 
@@ -182,6 +186,9 @@ public class LoginGUI {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (WriteException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}

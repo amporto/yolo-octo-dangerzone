@@ -1,15 +1,19 @@
 package main;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import javax.swing.Timer;
 
 import jxl.Cell;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
+import jxl.write.WriteException;
 
 
 /**
@@ -19,11 +23,30 @@ import jxl.write.WritableWorkbook;
  */
 public class AI implements Runnable{
 
-	Order order=new Order();
+	Order order = new Order();
 	private Random randomGenerator;
 	private String[] menuItems;
+	ActionListener actList = new ActionListener(){
+		public void actionPerformed(ActionEvent event) {
+			
+			try {
+				Order.makeOrder(chooseRandomItem(), "1");
+			} catch (BiffException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (WriteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+	}
+	};
+	Timer AI = new Timer(1000, actList);
 	
-	public AI() throws IOException, BiffException{
+	public AI() throws IOException, BiffException, WriteException{
 
 		File inventory=new File("./src/main/Inventory.xls");
         
@@ -40,8 +63,8 @@ public class AI implements Runnable{
         	menuItems[i]=menuItem;
         	
         }
-        
         randomGenerator=new Random();
+       
 	}
 	
 
@@ -53,10 +76,13 @@ public class AI implements Runnable{
 		
 	}
 	
+	
+	
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
 		
+		AI.start();
 	}
 
 	
