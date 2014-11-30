@@ -53,7 +53,8 @@ public class InventoryGUI extends JLabel{
         gbc.gridy = 0;
         
         JButton Update = new JButton("Get Updated Inventory");
-		 
+        JButton edit = new JButton("Edit");
+        
 		 add(Update, gbc);
 		
          Update.addActionListener(new ActionListener(){
@@ -64,7 +65,7 @@ public class InventoryGUI extends JLabel{
 			int i;
 			int max = 22;
 			
-			setLayout(new GridLayout(0,3,0,0));
+			setLayout(new GridLayout(0,2,0,0));
 			
 			//Clear for Updates
 			removeAll(); 
@@ -78,7 +79,25 @@ public class InventoryGUI extends JLabel{
 			String ITEM = Inventory.getCellContents(AcellLocation);
 			String QUANTITY = Inventory.getCellContents(BcellLocation);
 			
-			JButton edit = new JButton("Edit");
+			JLabel Item = new JLabel(ITEM);
+		    Item.setForeground(Color.WHITE);
+			
+			JLabel Quantity = new JLabel(QUANTITY);
+			Quantity.setForeground(Color.WHITE);
+			
+			 gbc.gridy++;
+		     add(Item, gbc);
+		     gbc.gridx++;
+			 add(Quantity, gbc);
+			 
+			 add(edit);
+			 add(Update);
+			 
+			 repaint();
+			 
+			 
+			 }
+			 
 			 edit.addActionListener(new ActionListener(){
 			     public void actionPerformed(ActionEvent ev1) {
 			    	
@@ -112,26 +131,6 @@ public class InventoryGUI extends JLabel{
 			    	    
 			     }
 				 });
-			
-			JLabel Item = new JLabel(ITEM);
-		    Item.setForeground(Color.WHITE);
-			
-			JLabel Quantity = new JLabel(QUANTITY);
-			Quantity.setForeground(Color.WHITE);
-			
-			 gbc.gridy++;
-		     add(Item, gbc);
-		     gbc.gridx++;
-			 add(Quantity, gbc);
-		
-			 
-			 add(edit);
-			 add(Update);
-			 
-			 repaint();
-			 
-			 
-			 }
 			 
 		} catch (BiffException e1) {
 			// TODO Auto-generated catch block
