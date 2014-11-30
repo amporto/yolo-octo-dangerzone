@@ -39,7 +39,7 @@ public class InventoryGUI extends JLabel{
 	public InventoryGUI() {
 		
 		try {
-			setIcon(new ImageIcon(ImageIO.read(getClass().getResource("207n5z7.jpg"))));
+			setIcon(new ImageIcon(ImageIO.read(getClass().getResource("inventory background.jpg"))));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

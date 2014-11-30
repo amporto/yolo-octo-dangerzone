@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 
 import jxl.Cell;
+import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import jxl.write.WritableSheet;
@@ -100,10 +101,12 @@ public class Order {
 		File inventory=new File("./src/main/Inventory.xls");
         
         Workbook inventoryWorkbook1=Workbook.getWorkbook(inventory);
-        WritableWorkbook inventoryWorkbook=Workbook.createWorkbook(new File("./src/main/Inventory.xls"), inventoryWorkbook1);
+        
+        //WritableWorkbook inventoryWorkbook=Workbook.createWorkbook(new File("./src/main/Inventory.xls"), inventoryWorkbook1);
         //WritableSheet loginSheet1=loginWorkbook.createSheet("First Sheet",0);
-        String[] inventorySheetName=inventoryWorkbook.getSheetNames();
-        WritableSheet inventorySheet=inventoryWorkbook.getSheet(inventorySheetName[0]);	
+        
+        String[] inventorySheetName=inventoryWorkbook1.getSheetNames();
+        Sheet inventorySheet=inventoryWorkbook1.getSheet(inventorySheetName[0]);	
         
 
         int i = 1;
@@ -124,6 +127,9 @@ public class Order {
             	int bcontent = Integer.parseInt(bcell.getContents());
             	int newSize = bcontent - Integer.parseInt(size);
             	size = Integer.toString(newSize);
+            	
+            	inventoryWorkbook1.close();
+            	//inventoryWorkbook.close();
             	
             	Inventory.alterItemAmount(item, size);
             	Trends.setTrends(item);

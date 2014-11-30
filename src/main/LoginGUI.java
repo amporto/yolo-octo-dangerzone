@@ -154,14 +154,15 @@ public class LoginGUI {
 
 							//new FXInSwing();
 
+							AI.AI.start();
 							new MainGUI();
-							new AI();
+							
 							//new UserGUI();
 
 
 	               	}
 						
-						if (confInfoAdmin==true){
+						if (confInfoAdmin == true){
 							/*
 =======
 							 * Unleash the Main GUI
@@ -178,7 +179,7 @@ public class LoginGUI {
 
 						if (confInfoAdmin == true) {
 							// new AdminGUI();
-							new AI();
+							AI.AI.start();
 							new FXInSwing();
 						}
 
@@ -186,9 +187,6 @@ public class LoginGUI {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					} catch (WriteException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}

@@ -24,27 +24,8 @@ import jxl.write.WriteException;
 public class AI implements Runnable{
 
 	Order order = new Order();
-	private Random randomGenerator;
-	private String[] menuItems;
-	ActionListener actList = new ActionListener(){
-		public void actionPerformed(ActionEvent event) {
-			
-			try {
-				Order.makeOrder(chooseRandomItem(), "1");
-			} catch (BiffException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (WriteException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-	}
-	};
-	Timer AI = new Timer(1000, actList);
+	private static Random randomGenerator;
+	private static String[] menuItems;
 	
 	public AI() throws IOException, BiffException, WriteException{
 
@@ -60,21 +41,48 @@ public class AI implements Runnable{
         	
         	Cell itemName = inventorySheet.getCell(0, i);
             String menuItem = itemName.getContents();
-        	menuItems[i]=menuItem;
+        	menuItems[i] = menuItem;
         	
         }
-        randomGenerator=new Random();
+       
+        randomGenerator = new Random();
        
 	}
 	
 
-	public String chooseRandomItem(){
+	public static String chooseRandomItem(){
 		
-		int index=randomGenerator.nextInt(menuItems.length);
-		String item=menuItems[index];
+		int index = randomGenerator.nextInt(menuItems.length);
+		String item = menuItems[index];
 		return item;
 		
 	}
+	
+	static ActionListener actList = new ActionListener(){
+		public void actionPerformed(ActionEvent event) {
+			
+			String RandomItem = chooseRandomItem();
+			System.out.println("Subtracted from" + RandomItem);
+			
+			try {
+				
+				Order.makeOrder(RandomItem, "1");
+				
+			} catch (BiffException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (WriteException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+	}
+	};
+	
+	static Timer AI = new Timer(10000, actList);
 	
 	
 	
