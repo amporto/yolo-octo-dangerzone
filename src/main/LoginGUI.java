@@ -142,10 +142,16 @@ public class LoginGUI {
 							* Unleash the Main GUI
 							*/
 
+
+							new FXInSwing();
+
+							
+
 							//new FXInSwing();
 
 							new MainGUI();
 							//new UserGUI();
+
 
 	               	}
 						
@@ -156,7 +162,7 @@ public class LoginGUI {
 							 */
 						//	Application.launch (UserGUI.class, null);
 							JFXPanel user = new UserGUI();
-							frame.add(user);
+							//frame.add(user);
 /*
 >>>>>>> ba8576f2eaa626c362381d375e9a7d4239be7259
 */
