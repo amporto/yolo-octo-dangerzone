@@ -62,7 +62,7 @@ public class InventoryGUI extends JLabel{
 		try {
 			
 			int i;
-			int max = 21;
+			int max = 22;
 			
 			setLayout(new GridLayout(0,3,0,0));
 			
@@ -95,6 +95,18 @@ public class InventoryGUI extends JLabel{
 			    		   
 			    		   String NewQuantity = JOptionPane.showInputDialog("New Quantity: ", null);
 			    		   
+			    		   try {
+							Inventory.alterItemAmount(ChooseItem, NewQuantity);
+						} catch (BiffException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (WriteException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						} catch (IOException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
 			    	   }
 			    	 
 			    	    
@@ -111,9 +123,9 @@ public class InventoryGUI extends JLabel{
 		     add(Item, gbc);
 		     gbc.gridx++;
 			 add(Quantity, gbc);
-			 gbc.gridx++;
-			 add(edit, gbc);
+		
 			 
+			 add(edit);
 			 add(Update);
 			 
 			 repaint();

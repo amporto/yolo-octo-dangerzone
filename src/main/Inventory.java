@@ -111,167 +111,26 @@ public class Inventory {
         String[] inventorySheetName = inventoryWorkbook.getSheetNames();
         WritableSheet inventorySheet = inventoryWorkbook.getSheet(inventorySheetName[0]);
 		
-        inventoryWorkbook.close();
+        int i = 1;
+        int max = 22;
 		
-		if (item == "Brewed Coffee"){
+		for (i =1; i <= max; i++){	
 			
-			WritableCell cell = inventorySheet.getWritableCell("B1");
-			Label c = (Label) cell;
+			String ACellLocation = "A"+i;
+			String BCellLocation = "B"+i;
+			
+		    Cell acell = inventorySheet.getCell(ACellLocation);
+		    String acontent = acell.getContents();
+		    
+		    if (acontent.equalsIgnoreCase(item)){
+			
+			WritableCell bcell = inventorySheet.getWritableCell(BCellLocation);
+			Label c = (Label) bcell;
 			c.setString(itemAmount);
 			
-		}
-		
-		if (item == "Espresso"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B2");
-			Label c = (Label) cell;
-			c.setString(itemAmount);
+		    }
 			
 		}
-		
-		if (item == "Nonfat Milk"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B21");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		
-		if (item =="Soymilk"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B20");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		
-		if (item =="Whole Milk"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B22");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item =="Whipped Creme"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B7");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item =="Vanilla Syrup"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B8");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item =="Caramel Syrup"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B9");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item =="Hazelnut Syrup"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B10");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item =="Chocolate Syrup"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B11");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item =="White Chocolate Syrup"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B12");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item =="Chai Latte"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B13");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Black Tea"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B14");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Earl Grey"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B15");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Zen"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B16");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Vanilla Rooibos"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B17");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Chocolate Cookie"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B18");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Cranberry Scone"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B19");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Blueberry Scone"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B6");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Vanilla Scone"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B3");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Blueberry Muffin"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B4");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		if (item=="Brownie"){
-			
-			WritableCell cell=inventorySheet.getWritableCell("B5");
-			Label c=(Label) cell;
-			c.setString(itemAmount);
-			
-		}
-		
 		
 		inventoryWorkbook.write();
 		inventoryWorkbook.close();
