@@ -861,11 +861,6 @@
 			<locationURI>PARENT-1-ECLIPSE_HOME/workspace/SE300-2/src/main/Inventory.java</locationURI>
 		</link>
 		<link>
-			<name>src/main/Inventory.xlsx</name>
-			<type>1</type>
-			<locationURI>PARENT-1-ECLIPSE_HOME/workspace/SE300-2/src/main/Inventory.xlsx</locationURI>
-		</link>
-		<link>
 			<name>src/main/InventoryGUI.java</name>
 			<type>1</type>
 			<locationURI>PARENT-1-ECLIPSE_HOME/workspace/SE300-2/src/main/InventoryGUI.java</locationURI>
