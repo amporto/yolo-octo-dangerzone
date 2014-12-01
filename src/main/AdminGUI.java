@@ -2,49 +2,129 @@ package main;
 
 import java.io.IOException;
 
-import javax.swing.JFrame;
-
-import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
+
+import javax.swing.JFrame;
+import javax.swing.JTabbedPane;
+import javax.swing.SwingUtilities;
+
+import jxl.read.biff.BiffException;
 
 /**
- * @author Alex Procaccini
- * @version 1.0
- * @created 12-Oct-2014 7:46:01 PM
- *
- *          This is the GUI for the administrator. Everything they need will be
- *          here.
+ * 
+ * @author Angela Porto
+ * 
+ *         This class is a Test class for the first sprint that integrates my
+ *         interfaces within the tabs of the java swing frame that Alex has
+ *         created.
+ * 
  */
-public class AdminGUI extends JFXPanel {
+
+public class AdminGUI extends JFrame {
 
 	/**
 	 * Instantiate new scenes of each interface that will be added to a panel on
 	 * each tab
 	 */
 
-	public AdminGUI() {
+	JFXPanel panelChangeInfo;
+	JFXPanel panelProfits;
+	//JFXPanel panelSeatingLayout;
+	JFXPanel Inventory;
+	JFXPanel Trends;
+	
+	Scene sceneChange;
+	Scene sceneProfits;
+	//Scene sceneSeating;
+	
+
+	public AdminGUI()  {
+
+		panelChangeInfo = new JFXPanel();
+		
+		panelProfits = new JFXPanel();
+		//panelSeatingLayout = new JFXPanel();
+		ChangeInfoGUI changeSet = new ChangeInfoGUI();
+		//MenuGUI orderMenu = new MenuGUI();
+		InventoryGUI invgui = new InventoryGUI();
+		TrendsGUI trenGUI=new TrendsGUI();
+		
 		Platform.runLater(() -> {
+
 			try {
-				this.setScene(new Scene(FXMLLoader.load(getClass().getResource(
-						"/fxml/AdminGUI.fxml"))));
+
+				panelChangeInfo.setScene(sceneChange = new Scene(FXMLLoader
+						.load(getClass()
+								.getResource("/fxml/ChangeInfoGUI.fxml"))));
+
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+
 		});
+
+		Platform.runLater(new Runnable() {
+			@Override
+			public void run() {
+
+				try {
+
+					panelProfits.setScene(sceneProfits = new Scene(FXMLLoader
+							.load(getClass().getResource(
+									"/fxml/ProfitsGUI.fxml"))));
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+			}
+		});
+
+		/*Platform.runLater(new Runnable() {
+			@Override
+			public void run() {
+
+				try {
+
+					panelSeatingLayout.setScene(sceneSeating = new Scene(
+							FXMLLoader.load(getClass().getResource(
+									"/fxml/SeatingLayoutGUI.fxml"))));
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+
+			}
+		});*/
+
+		setTitle("Tabbed Pane");
+		JTabbedPane jtp = new JTabbedPane();
+		getContentPane().add(jtp);
+		//jtp.addTab("Menu", orderMenu);
+		jtp.addTab("Account", panelChangeInfo);
+		jtp.addTab("Profits", panelProfits);
+		//jtp.addTab("Seating", panelSeatingLayout);
+		jtp.addTab("Inventory", invgui);
+		jtp.addTab("Trends", trenGUI);
+
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setSize(450, 800);
+		this.setVisible(true);
+		this.setResizable(false);
+		this.setLocationRelativeTo(null);
 	}
 
 	public static void main(String[] args) {
-
-		JFrame frame = new JFrame("Login");
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.add(new AdminGUI());
-		frame.setSize(450, 800);
-		frame.setLocationRelativeTo(null);
-		frame.setResizable(false);
-		frame.setVisible(true);
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				
+					new AdminGUI();
+				
+			}
+		});
 	}
 }

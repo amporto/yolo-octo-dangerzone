@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-min-height: 800; -fx-min-width: 450; -fx-max-height: 800; -fx-max-width: 450; -fx-background-color: #444444;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <tabs>
+    <Tab text="Profits">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="767.0" prefWidth="478.0" style="-fx-background-color: #444444;">
+               <children>
+                  <Label layoutX="117.0" layoutY="56.0" text="Profiting: $" textFill="WHITE">
+                     <font>
+                        <Font name="Caviar Dreams" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="117.0" layoutY="14.0" text="Today's Sales" textFill="WHITE">
+                     <font>
+                        <Font name="Caviar Dreams" size="35.0" />
+                     </font>
+                  </Label>
+                  <StackedAreaChart layoutX="9.0" layoutY="145.0" prefHeight="559.0" prefWidth="433.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <xAxis>
+                        <NumberAxis autoRanging="false" label="Hour" minorTickCount="0" minorTickLength="0.0" tickLabelFill="WHITE" tickUnit="2.0" upperBound="14.0" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis label="Quantity" side="LEFT" tickLabelFill="WHITE" />
+                     </yAxis>
+                  </StackedAreaChart>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Inventory">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </content>
+      </Tab>
+    <Tab text="Trends">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+      <Tab text="Settings">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextField alignment="CENTER" layoutX="140.0" layoutY="172.0" promptText="Current Password" />
+                  <TextField alignment="CENTER" layoutX="140.0" layoutY="212.0" promptText="New Password" />
+                  <TextField alignment="CENTER" layoutX="140.0" layoutY="252.0" promptText="Confirm Password" />
+                  <Button layoutX="182.0" layoutY="294.0" mnemonicParsing="false" onAction="#account" prefHeight="31.0" prefWidth="88.0" text="Update" />
+                  <TextField fx:id="username" alignment="CENTER" layoutX="140.0" layoutY="134.0" promptText="Username" />
+                  <Label alignment="CENTER" layoutX="66.0" layoutY="73.0" text="Account Information" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Caviar Dreams" size="35.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>

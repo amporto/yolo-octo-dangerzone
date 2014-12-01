@@ -1,6 +1,9 @@
 package main;
+import javax.swing.JOptionPane;
+
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML
+import javafx.fxml.FXML;
+import javafx.scene.control.RadioButton;
 
 /**
  * @author Alex Procaccini

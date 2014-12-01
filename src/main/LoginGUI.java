@@ -148,16 +148,16 @@ public class LoginGUI {
 							*/
 
 
-							new FXInSwing();
+							//new FXInSwing();
 
 							
 
 							//new FXInSwing();
 
 							AI.AI.start();
-							new MainGUI();
+							new UserGUI();
 							
-							//new UserGUI();
+							
 
 
 	               	}
@@ -180,7 +180,7 @@ public class LoginGUI {
 						if (confInfoAdmin == true) {
 							// new AdminGUI();
 							AI.AI.start();
-							new FXInSwing();
+							new AdminGUI();
 						}
 
 					} catch (BiffException e) {
